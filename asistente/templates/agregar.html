@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block head%}
+{% include "meta.html" %}
+<title>Contacto</title>
+{%endblock%}
+{%block body%}
+<header>
+{% include "navbar.html" %}
+</header>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container" align="center">
+<div class="row">
+<h4>Agregar Actividad</h4>
+<form method="POST" action="">{%csrf_token%}
+{{form.as_p}}
+<input type="submit" value="Subir"/>
+</form>
+</div>
+</div>
+{% include "footer.html" %}
+{%endblock%}

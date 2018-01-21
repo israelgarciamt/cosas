@@ -1,0 +1,22 @@
+
+{% load static %}
+
+  <input type="checkbox" id="btn-menu">
+   <label for="btn-menu"><img src="{% static "ico-menu.png" %}" alt="30px"></label>
+
+   <nav class="menu" text-align="right">
+     <ul>
+       {% if user.is_authenticated %}
+              <li><a href="perfil">Perfil</a></li>
+              <li><a href="#">Retar a alguien</a></li>
+              <li><a href="aburrido">Dime que hacer</a></li>
+              <li><a href="agregar">Agregar reto</a></li>
+              <li><a href="#">Salir</a></li>
+
+       {%else%}
+               <li><a href="login">Inicio</a></li>
+               <li><a href="registrarse">Registrarse</a></li>
+               <li><a href="presentacion">¿Que es esto?</a></li>
+        {% endif %}
+     </ul>
+   </nav>
